@@ -1,6 +1,10 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Home.module.scss"
+import Title from "../../components/Title/Title";
+import Founder from "../../components/Founder";
+
+import founders from "../../data/founders"
 
 const cx = classNames.bind(styles);
 
@@ -15,8 +19,27 @@ const Home = function ({ }) {
                     <a className={cx("button-link")} href="">Visit Course</a>
                 </div>
             </section>
-            <section className={cx("features")}>
+            <section className={cx("container")}>
+                <Title
+                    title={"Awesome Features"}
+                    subTitle={"Replenish man have thing gathering lights yielding shall you"}
+                />
 
+                <div className={cx("features")}>
+                    
+                </div>
+            </section>
+
+            <section className={cx("container")}>
+                <Title
+                    title={"Community Experts"}
+                    subTitle={"Replenish man have thing gathering lights yielding shall you"}
+                />
+                <div className={cx("founders")}>
+                    {founders.map(function (founder, index) {
+                        <Founder />
+                    })}
+                </div>
             </section>
          </main>
     )

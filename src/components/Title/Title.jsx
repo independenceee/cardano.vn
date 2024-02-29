@@ -4,9 +4,12 @@ import styles from "./Title.module.scss";
 
 const cx = classNames.bind(styles)
 
-const Title = function () {
+const Title = function ( { title, subTitle } ) {
     return (
-        <></>
+        <div classNames={cx("wrapper")}>
+            <h1 className={cx("title")}>{title}</h1>
+            <p className={cx("sub-title")}>{subTitle}</p>
+        </div>
     )
 }
 
