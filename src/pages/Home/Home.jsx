@@ -32,12 +32,30 @@ const Home = function ({ }) {
 
             <section className={cx("container")}>
                 <Title
+                    title={"Course Features"}
+                    subTitle={"Replenish man have thing gathering lights yielding shall you"}
+                />
+
+                <div className={cx("courses")}>
+                    
+                </div>
+            </section>
+
+            <section className={cx("container")}>
+                <Title
                     title={"Community Experts"}
                     subTitle={"Replenish man have thing gathering lights yielding shall you"}
                 />
                 <div className={cx("founders")}>
                     {founders.map(function (founder, index) {
-                        <Founder />
+                        return (
+                            <Founder
+                                key={index}
+                                name={founder.name}
+                                description={founder.description}
+                                image={founder.image}
+                            />
+                       )
                     })}
                 </div>
             </section>
