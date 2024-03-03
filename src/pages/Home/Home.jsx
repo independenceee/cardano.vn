@@ -3,14 +3,15 @@ import classNames from "classnames/bind";
 import styles from "./Home.module.scss"
 import Title from "../../components/Title/Title";
 import Founder from "../../components/Founder";
-
 import founders from "../../data/founders"
+
 
 const cx = classNames.bind(styles);
 
 const Home = function ({ }) {
     return (
         <main className={cx("wrapper")}>
+            {/* <Service/> */}
             <section className={cx("background")}>
                 <h2 className={cx("title")}>Cộng đồng Cardano Việt nam</h2>
                 <p className={cx("sub-title")}>Vì một thế giới Phi tập trung hơn</p>
