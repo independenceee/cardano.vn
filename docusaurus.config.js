@@ -28,6 +28,9 @@ const config = {
             },
         ],
     ],
+    markdown:{
+        format:'detect'
+    }
 };
 
 export default config;
