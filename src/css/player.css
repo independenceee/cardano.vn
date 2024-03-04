@@ -1,0 +1,29 @@
+/* Mp3Player.css */
+.container {
+    text-align: center;
+}
+
+.playlist {
+    margin-top: 20px;
+}
+
+.playlist h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.playlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+    background-color: #f0f0f0;
+}

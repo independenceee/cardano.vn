@@ -1,5 +1,6 @@
 ---
-id: sheet data
+id: sheet-data
+slug: sheet-data
 title: sheet data
 sidebar_label: sheet data
 ---
@@ -13,10 +14,7 @@ import { Space, Table, Tag } from 'antd';
 export const GoogleSheetsData = () => {
     const [sheetData, setSheetData] = useState([]);
 
-    useEffect(() => {
-        fetchSheetData();
-    }, []);
-
+    
     const columns = sheetData.length > 0 && sheetData[0].map((header, index) => {
         if (header === "src") {
 
@@ -39,15 +37,7 @@ export const GoogleSheetsData = () => {
         ...row.reduce((acc, val, cellIndex) => ({ ...acc, [cellIndex.toString()]: val }), {}),
     }));
 
-    const fetchSheetData = async () => {
-        try {
-            const response = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1ghClpZ0iWfRuqQRhBBythqqLtIiMT92-zDineSyr7uk/values/page1?key=AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js');
-            const data = await response.json();
-            setSheetData(data.values);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
+    
     return (<div>
         <Table columns= { columns } dataSource = { dataSource } />
             </div>);
