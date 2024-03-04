@@ -1,5 +1,4 @@
 ---
-id: sheet-data
 slug: sheet-data
 title: sheet data
 sidebar_label: sheet data
@@ -18,28 +17,6 @@ export const GoogleSheetsData = () => {
         fetchSheetData();
     }, []);
 
-    const columns = sheetData.length > 0 && sheetData[0].map((header, index) => {
-        if (header === "src") {
-
-            return {
-                title: "",
-                dataIndex: index.toString(),
-                key: index.toString(),
-                render: (data) => (<a href= { data } > view < /a>),
-                }
-            }
-            return {
-                title: header,
-                dataIndex: index.toString(),
-                key: index.toString(),
-            };
-        });
-
-    const dataSource = sheetData.slice(1).map((row, rowIndex) => ({
-        key: rowIndex.toString(),
-        ...row.reduce((acc, val, cellIndex) => ({ ...acc, [cellIndex.toString()]: val }), {}),
-    }));
-
     const fetchSheetData = async () => {
         try {
             const response = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1ghClpZ0iWfRuqQRhBBythqqLtIiMT92-zDineSyr7uk/values/page1?key=AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js');
@@ -49,6 +26,31 @@ export const GoogleSheetsData = () => {
             console.error('Error fetching data:', error);
         }
     };
+
+    const columns = sheetData.length > 0 && sheetData[0].map((header, index) => {
+        if (header === "src") {
+
+            return {
+                title: "",
+                dataIndex: index.toString(),
+                key: index.toString(),
+                render: (data) => (<a href= { data } > view < /a>),
+            }
+        }
+        return {
+            title: header,
+            dataIndex: index.toString(),
+            key: index.toString(),
+            onFilter: (value, record) => record.name.includes(value),
+        };
+    });
+
+    const dataSource = sheetData.slice(1).map((row, rowIndex) => ({
+        key: rowIndex.toString(),
+        ...row.reduce((acc, val, cellIndex) => ({ ...acc, [cellIndex.toString()]: val }), {}),
+    }));
+
+    
     return (<div>
         <Table columns= { columns } dataSource = { dataSource } />
             </div>);
