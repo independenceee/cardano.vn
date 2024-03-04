@@ -8,8 +8,8 @@ sidebar_label: mp3 player
 
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import { useState,useEffect } from 'react';
-import { List } from 'antd';
+import { useState, useEffect } from 'react';
+import { List,Tooltip  } from 'antd';
 
 export const Mp3Player = () => {
     const [playlist, setPlaylist] = useState([]);
@@ -22,14 +22,13 @@ export const Mp3Player = () => {
         try {
             const response = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1ghClpZ0iWfRuqQRhBBythqqLtIiMT92-zDineSyr7uk/values/audio?key=AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js');
             const data = await response.json();
-            const playlist = data.values.slice(1).map((row,rowIndex) =>
-            {
-            return ({
+            const playlist = data.values.slice(1).map((row, rowIndex) => {
+                return ({
                     key: rowIndex.toString(),
                     date: row[0],
                     title: row[1],
                     link: row[2],
-                    abstract:row[3]
+                    abstract: row[3]
                 })
             });
             setPlaylist(playlist);
@@ -38,49 +37,51 @@ export const Mp3Player = () => {
         }
     };
     const handleClickNext = () => {
-      console.log('click next')
+        console.log('click next')
         setTrackIndex((currentTrack) =>
             currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
         );
     };
     const handleEnd = () => {
-    console.log('end')
-    setTrackIndex((currentTrack) =>
+        console.log('end')
+        setTrackIndex((currentTrack) =>
             currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
         );
-  }
-  
+    }
 
-if (playlist.length < 1 ) {
-    return <div>Loading...</div>;
-}
-return (
-    <div>
+
+    if (playlist.length < 1) {
+        return <div>Loading...</div>;
+    }
+    return (
+        <div>
         <AudioPlayer
-          volume="0.5"
-          src={playlist[currentTrack].link}
-          showSkipControls
-          onClickNext={handleClickNext}
-          onEnded={handleEnd}
-          onError={()=> {console.log('play error')}}
-          // Try other props!
-        />
-            <div className="playlist">
-                <List
+          volume= "0.5"
+    src = { playlist[currentTrack].link }
+    showSkipControls
+    onClickNext = { handleClickNext }
+    onEnded = { handleEnd }
+    onError = {()=> { console.log('play error') }}
+// Try other props!
+/>
+    < div className = "playlist" >
+        <List
                     bordered
-                    dataSource={playlist}
-                    renderItem={(audio, index) => (
-                        <List.Item 
-                            style={index === currentTrack ? { backgroundColor: '#f0f0f0', fontWeight: 'bold' } : null} 
-                            onClick={() => setTrackIndex(index)}
-                        >
-                            {audio.title}  - {audio.date}
-                        
-                        </List.Item>
-                    )}
-                />
-            </div>
-    </div>
+    dataSource = { playlist }
+    renderItem = {(audio, index) => ( 
+        <List.Item 
+        style= { index === currentTrack ? { backgroundColor: '#f0f0f0', fontWeight: 'bold' } : null}
+        onClick = {() => setTrackIndex(index)}>
+        <Tooltip title={audio.abstract}>
+        <span>{audio.title}</span>
+        </Tooltip>
+        < br />
+        <small>{ audio.date } < /small> 
+        </List.Item> 
+    )}
+/>
+    < /div>
+    < /div>
 );
 }
 
