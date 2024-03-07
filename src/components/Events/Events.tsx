@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Heading from "@theme/Heading";
-import styles from "./styles.module.css";
+import styles from "./Events.module.scss";
 import React from "react";
 
 type EventItem = {

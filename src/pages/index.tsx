@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
@@ -16,6 +15,7 @@ import {
 import { loadSlim } from "@tsparticles/slim";
 
 import styles from "./index.module.css";
+import Events from "@site/src/components/Events";
 
 function HomepageHeader() {
   const [init, setInit] = useState(false);
@@ -154,7 +154,7 @@ export default function Home(): JSX.Element {
     >
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <Events />
       </main>
     </Layout>
   );
