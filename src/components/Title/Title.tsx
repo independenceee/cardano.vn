@@ -11,10 +11,23 @@ type Props = {
 const Title = function ({ title, subTitle }: Props) {
     return (
         <div className={clsx("text--center container", styles.wrapperTitle)}>
-            <Heading as="h2" className={styles.title}>
+            <Heading
+                as="h2"
+                className={styles.title}
+                data-aos="fade-up"
+                data-aos-delay={500}
+                data-aos-duration={500}
+            >
                 {title}
             </Heading>
-            <p className={styles.subTitle}>{subTitle}</p>
+            <p
+                data-aos="fade-up"
+                data-aos-delay={500}
+                data-aos-duration={500}
+                className={styles.subTitle}
+            >
+                {subTitle}
+            </p>
         </div>
     );
 };

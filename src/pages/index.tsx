@@ -1,30 +1,17 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Events from "@site/src/components/Events";
-import Courses from "@site/src/components/Courses";
-import Hero from "@site/src/components/Hero";
-import About from "../components/About";
+import Home from "@site/src/pages/Home";
+import Aos from "@site/src/components/Aos";
 
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <Layout
-      title={`ADA | ${siteConfig.title}`}
-      description="Description will go into a meta tag in"
-    >
-      <section>
-        <Hero />
-      </section>
-      <section>
-        <Courses />
-      </section>
-      <section>
-        <About />
-      </section>
-      <section>
-        <Events />
-      </section>
-    </Layout>
-  );
-}
+type Props = {};
+
+const App = function ({}: Props) {
+    return (
+        <Layout>
+            <Home />
+            <Aos />
+        </Layout>
+    );
+};
+
+export default App;
