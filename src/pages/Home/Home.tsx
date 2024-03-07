@@ -13,11 +13,22 @@ const Home = function ({}: Props) {
             <section>
                 <Hero />
             </section>
+
             <section>
                 <About />
             </section>
             <section>
+                <About />
+            </section>
+            <section>
+                <About />
+            </section>
+
+            <section>
                 <Courses />
+            </section>
+            <section>
+                <About />
             </section>
             <section>
                 <Events />

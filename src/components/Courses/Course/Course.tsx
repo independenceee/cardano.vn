@@ -19,35 +19,14 @@ const Course = function ({ course, index }: Props) {
             data-aos-delay={`${100 * (index + 4)}`}
             data-aos-duration={`${1000 * (index + 4)}`}
         >
-            <div className={cx("inner")}>
+            <div className={cx("card")}>
                 <section className={cx("image-container")}>
                     <img className={cx("image")} src={course.image} alt="" />
                 </section>
-                <div className={cx("infomation")}>
-                    <section className={cx("title-container")}>
-                        <h3 className={cx("title-main")}>{course.title}</h3>
-                    </section>
-                    <section className={cx("description")}>
-                        {course.description}
-                    </section>
-
-                    <section className={cx("infomation-wrapper")}>
-                        <div className={cx("infomation-container")}>
-                            <MdOutlineDateRange
-                                className={cx("infomation-icon")}
-                            />
-                            <span className={cx("infomation-content")}>
-                                {course.dateTime}
-                            </span>
-                        </div>
-                        <div className={cx("infomation-container")}>
-                            <MdOutlinePlace className={cx("infomation-icon")} />
-                            <span className={cx("infomation-content")}>
-                                {course.places}
-                            </span>
-                        </div>
-                    </section>
-                </div>
+                <section className={cx("content")}>
+                    <h2 className={cx("title")}>{course.title}</h2>
+                    <p className={cx("description")}>{course.description}</p>
+                </section>
             </div>
         </div>
     );
