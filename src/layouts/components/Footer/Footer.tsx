@@ -11,7 +11,7 @@ import TwitterIcon from "../../../assets/icons/twitter.svg";
 import RedisIcon from "../../../assets/icons/redis.svg";
 import LinkedInIcon from "../../../assets/icons/linkedin.svg";
 
-import EventImage from "../../../assets/images/event.png";
+// import EventImage from "../../../assets/images/event.png";
 
 const cx = classNames.bind(styles);
 const socials = [
@@ -28,7 +28,9 @@ const Footer = function () {
       <div className="container">
         <div className={cx("content-wrapper")}>
           <div className={cx("contact-via-email")}>
-            <Heading as="h3" className={cx("footer-heading-title")}>Cardano</Heading>
+            <Heading as="h3" className={cx("footer-heading-title")}>
+              Cardano
+            </Heading>
             <p>
               Get the latest from the Aleph Zero ecosystem and engineering
               updates, straight to your inbox.
@@ -143,7 +145,7 @@ const Footer = function () {
           <div className={cx("upcomming-events")}>
             <Heading as="h3">Sự kiện sắp diễn ra</Heading>
             <div className={cx("event-image-wrapper")}>
-              <img src={EventImage} className={cx("event-image")} alt="" />
+              <img src={""} className={cx("event-image")} alt="" />
             </div>
           </div>
         </div>
