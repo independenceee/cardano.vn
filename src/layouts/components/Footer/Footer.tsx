@@ -5,10 +5,22 @@ import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
 import EmailIcon from "../../../assets/icons/mail.svg";
 import ArrowIcon from "../../../assets/icons/arrow.svg";
+import YoutubeIcon from "../../../assets/icons/youtube.svg";
+import TelegramIcon from "../../../assets/icons/telegram.svg";
+import TwitterIcon from "../../../assets/icons/twitter.svg";
+import RedisIcon from "../../../assets/icons/redis.svg";
+import LinkedInIcon from "../../../assets/icons/linkedin.svg";
 
 import EventImage from "../../../assets/images/event.png";
 
 const cx = classNames.bind(styles);
+const socials = [
+  YoutubeIcon,
+  TelegramIcon,
+  RedisIcon,
+  TwitterIcon,
+  LinkedInIcon,
+];
 
 const Footer = function () {
   return (
@@ -16,7 +28,7 @@ const Footer = function () {
       <div className="container">
         <div className={cx("content-wrapper")}>
           <div className={cx("contact-via-email")}>
-            <Heading as="h3">Be future-ready</Heading>
+            <Heading as="h3" className={cx("footer-heading-title")}>Cardano</Heading>
             <p>
               Get the latest from the Aleph Zero ecosystem and engineering
               updates, straight to your inbox.
@@ -40,10 +52,23 @@ const Footer = function () {
                   id="check-input"
                 />
                 <label htmlFor="check-input">
-                  Agree with the term and policy
+                  I consent to receive commercial information in the form of a
+                  newsletter sent to the e-mail address provided by the Aleph
+                  Zero Foundation with registered seat in Bergliweg 15, 6300
+                  Zug. Providing consent is voluntary. Consent may be revoked at
+                  any time.
                 </label>
               </div>
             </form>
+            <ul className={cx("social-connection")}>
+              {socials.map((Social, index) => (
+                <li key={index}>
+                  <a href="#">
+                    <Social />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className={cx("comunity")}>
             <Heading as="h3">Cộng đồng</Heading>
