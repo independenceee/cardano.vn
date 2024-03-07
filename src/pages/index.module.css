@@ -4,15 +4,33 @@
  */
 
 .heroBanner {
+  height: 100vh;
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+.button {
+  white-space: nowrap;
+}
+
+#tsparticles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroContentContainer {
+  z-index: 1;
+}
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+
+  .toggleText {
+    display: none;
   }
 }
 
