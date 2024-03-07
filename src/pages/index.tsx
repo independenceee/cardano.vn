@@ -5,6 +5,7 @@ import Events from "@site/src/components/Events";
 import Courses from "@site/src/components/Courses";
 import Hero from "@site/src/components/Hero";
 import About from "../components/About";
+import Footer from "../layouts/components/Footer";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -25,6 +26,7 @@ export default function Home(): JSX.Element {
       <section>
         <Events />
       </section>
+      <Footer />
     </Layout>
   );
 }
