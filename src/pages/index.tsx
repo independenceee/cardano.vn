@@ -4,23 +4,27 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Events from "@site/src/components/Events";
 import Courses from "@site/src/components/Courses";
 import Hero from "@site/src/components/Hero";
+import About from "../components/About";
 
 export default function Home(): JSX.Element {
-    const { siteConfig } = useDocusaurusContext();
-    return (
-        <Layout
-            title={`ADA | ${siteConfig.title}`}
-            description="Description will go into a meta tag in"
-        >
-            <section>
-                <Hero />
-            </section>
-            <section>
-                <Courses />
-            </section>
-            <section>
-                <Events />
-            </section>
-        </Layout>
-    );
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title={`ADA | ${siteConfig.title}`}
+      description="Description will go into a meta tag in"
+    >
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <Courses />
+      </section>
+      <section>
+        <About />
+      </section>
+      <section>
+        <Events />
+      </section>
+    </Layout>
+  );
 }
