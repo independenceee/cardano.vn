@@ -7,7 +7,10 @@ import { type Container, type ISourceOptions } from "@tsparticles/engine";
 import clsx from "clsx";
 import { loadSlim } from "@tsparticles/slim";
 
+import CardanoIcon from "../../assets/icons/logo.svg";
+const cx = classNames.bind(styles);
 import styles from "./Hero.module.scss";
+import classNames from "classnames/bind";
 const Hero = function () {
   const [init, setInit] = useState(false);
   const { siteConfig } = useDocusaurusContext();
@@ -104,15 +107,9 @@ const Hero = function () {
           id={clsx(styles.tsparticles)}
           particlesLoaded={particlesLoaded}
           options={options}
-          style={{
-            width: "100%",
-            height: "100vh",
-            position: "absolute",
-            inset: 0,
-          }}
         />
       )}
-      <div className={clsx("container", styles.heroContentContainer)}>
+      {/* <div className={clsx("container", styles.heroContentContainer)}>
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -131,7 +128,33 @@ const Hero = function () {
             Certified Associate
           </Link>
         </div>
-      </div>
+      </div> */}
+
+      <section className={cx("banner", "container")}>
+        <div className={cx("wrapper-banner")}>
+          <div className={cx("banner-inner")}>
+            <div data-aos="fade-left" className={cx("banner-content")}>
+              <h1 className={cx("banner-title")}>
+                <div className={cx("banner-title-up")}>Platform for</div>
+                <div className={cx("banner-title-down")}>
+                  The crypto Industry
+                </div>
+              </h1>
+              <div className={cx("banner-intro")}>
+                At vero eos et accusamus et iusto odio ignissimos ducimus qui
+                blanditiis praesentium um deleniti atque corrupti.
+              </div>
+              {/* Button goes here */}
+              <button className={cx("banner-button")}>Get started</button>
+            </div>
+            <div data-aos="fade-right" className={cx("banner-image-wrapper")}>
+              <div className={cx("banner-image-container")}>
+                <CardanoIcon className={cx("branner-image")} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
   );
 };

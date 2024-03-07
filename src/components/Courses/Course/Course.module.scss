@@ -1,8 +1,9 @@
 .wrapper {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
+<<<<<<< Updated upstream
 .card {
     border: 1px solid rgb(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -62,4 +63,68 @@
 }
 
 .description {
+=======
+.inner {
+  border: 1px solid rgba(97, 97, 97, 0.1);
+  border-radius: 8px;
+  position: relative;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  border-radius: inherit;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.title-main {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0.9px;
+}
+
+.infomation {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description {
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: 0.64px;
+}
+
+.infomation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infomation-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.infomation-icon {
+  font-size: 20px;
+}
+
+.infomation-content {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.78px;
+  font-weight: 300;
+>>>>>>> Stashed changes
 }
