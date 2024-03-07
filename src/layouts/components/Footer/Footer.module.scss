@@ -1,9 +1,13 @@
 .wrapper {
-  margin-top: 60px;
+  padding-top: 60px;
+}
+
+.footer-heading-title {
+  padding-left: 32px;
+  border-left: 6px solid var(--ifm-color-primary-dark);
 }
 .content-wrapper {
   display: flex;
-  gap: 32px;
 }
 
 .copyright {
@@ -16,9 +20,14 @@
 }
 
 .comunity,
-.courses,
+.courses {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .upcomming-events {
-  width: 20%;
+  width: 30%;
 }
 .upcomming-events {
   padding-bottom: 80px;
@@ -58,7 +67,6 @@
 
 .checkbox-field {
   display: flex;
-  align-items: center;
   gap: 12px;
   margin-top: 24px;
 }
@@ -81,6 +89,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  color: var(--ifm-color-primary-darker);
 }
 
 .arrow-icon {
@@ -99,6 +108,13 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+.social-connection {
+  list-style-type: none;
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
 }
 
 @media screen and (max-width: 768px) {
