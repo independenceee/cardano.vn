@@ -1,33 +1,25 @@
 import React, { ReactNode } from "react";
-import classNames from "classnames/bind";
-import styles from "./Course.module.scss";
-import { CourseType } from "@site/src/types/Generics";
+import styles from "./Event.module.scss";
+import { EventItem } from "@site/src/types/Generics";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+
 type Props = {
-    index: number;
-    course: CourseType;
+  event: EventItem;
 };
 
-const cx = classNames.bind(styles);
-
-const Event = function ({ course, index }: Props) {
-    return (
-        <div
-            className={cx("wrapper", "col col--4")}
-            data-aos="fade-up"
-            data-aos-delay={`${100 * (index + 4)}`}
-            data-aos-duration={`${1000 * (index + 4)}`}
-        >
-            <div className={cx("card")}>
-                <section className={cx("image-container")}>
-                    <img className={cx("image")} src={course.image} alt="" />
-                </section>
-                <section className={cx("content")}>
-                    <h2 className={cx("title")}>{course.title}</h2>
-                    <p className={cx("description")}>{course.description}</p>
-                </section>
-            </div>
-        </div>
-    );
-};
+function Event({ event }: Props) {
+  return (
+    <div className={clsx("col col--4", styles.eventItemWrapper)}>
+      <div className={styles.imageWrapper}>
+        <img className={styles.image} src={event.image} />
+      </div>
+      <div className={clsx(styles.wrapperEventInfo)}>
+        <Heading as="h3">{event.title}</Heading>
+        <p className={clsx(styles.address)}>{event.address}</p>
+      </div>
+    </div>
+  );
+}
 
 export default Event;
