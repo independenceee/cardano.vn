@@ -3,6 +3,7 @@ import Events from "@site/src/components/Events";
 import Courses from "@site/src/components/Courses";
 import Hero from "@site/src/components/Hero";
 import About from "@site/src/components/About";
+import Footer from "@site/src/layouts/components/Footer";
 
 type Props = {};
 
@@ -21,6 +22,7 @@ const Home = function ({}: Props) {
             <section>
                 <Events />
             </section>
+            <Footer />
         </main>
     );
 };
