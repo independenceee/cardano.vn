@@ -17,12 +17,6 @@ const Home = function ({}: Props) {
             <section>
                 <About />
             </section>
-            <section>
-                <About />
-            </section>
-            <section>
-                <About />
-            </section>
 
             <section>
                 <Courses />
@@ -33,7 +27,7 @@ const Home = function ({}: Props) {
             <section>
                 <Events />
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </main>
     );
 };
