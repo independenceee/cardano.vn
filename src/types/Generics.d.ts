@@ -11,4 +11,12 @@ export type EventItem = {
   title: string;
   image: string;
   address: string;
+  date: string;
+};
+
+export type RoadmapType = {
+  id?: number;
+  title?: string;
+  description?: string;
+  datetime?: string;
 };
