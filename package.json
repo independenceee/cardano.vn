@@ -25,6 +25,7 @@
     "classnames": "^2.5.1",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
+    "framer-motion": "^11.0.8",
     "normalize.css": "^8.0.1",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
