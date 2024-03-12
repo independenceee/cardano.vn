@@ -1,0 +1,35 @@
+.news {
+    min-height: 100vh;
+}
+
+.wrapper {
+}
+
+.wrapper-inner {
+
+}
+
+.left {
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    position: relative;
+    padding-top: 20%;
+}
+
+.video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

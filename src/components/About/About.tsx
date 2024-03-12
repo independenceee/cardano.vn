@@ -3,7 +3,6 @@ import styles from "./About.module.scss";
 import classNames from "classnames/bind";
 import Title from "../Title";
 import CheckIcon from "../../assets/icons/check.svg";
-import Circle from "../Circle";
 
 const cx = classNames.bind(styles);
 
@@ -14,7 +13,6 @@ const About = function ({ reverse }: Props) {
     return (
         <section className={cx("about", "container")}>
             <div className={cx("wrapper")}>
-                {/* <Circle /> */}
                 <Title title="Cardano" subTitle="Cộng đồng tại Việt Nam" />
                 <div className={cx("wrapper-inner", { reverse: reverse })}>
                     <div className={cx("video-wrapper")} data-aos="fade-right">
