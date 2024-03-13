@@ -2,31 +2,39 @@ import { CourseType } from "../types/Generics";
 
 const courses: CourseType[] = [
     {
-        symbol: "Community",
-        dateTime: String(new Date(Date.now())),
-        description:
-            "The mission of Crypto Rockstars since 2018 is to educate people about current economic trends, social changes and opportunities that blockchain technology offers us.",
-        image: "https://media-public.canva.com/NRg_A/MAEhCANRg_A/1/tl.png",
-        places: "Cologne, Germany",
-        title: "May 4-6, 2023",
+        id: 1,
+        name: "Tab 1",
+        content: "Content 1",
     },
     {
-        symbol: "Community",
-        dateTime: String(new Date(Date.now())),
-        description:
-            "The mission of Crypto Rockstars since 2018 is to educate people about current economic trends, social changes and opportunities that blockchain technology offers us.",
-        image: "https://media-public.canva.com/NRg_A/MAEhCANRg_A/1/tl.png",
-        places: "Cologne, Germany",
-        title: "May 4-6, 2023",
+        id: 2,
+        name: "Tab 2",
+        content: "Content 2",
     },
     {
-        symbol: "Community",
-        dateTime: String(new Date(Date.now())),
-        description:
-            "The mission of Crypto Rockstars since 2018 is to educate people about current economic trends, social changes and opportunities that blockchain technology offers us.",
-        image: "https://media-public.canva.com/NRg_A/MAEhCANRg_A/1/tl.png",
-        places: "Cologne, Germany",
-        title: "May 4-6, 2023",
+        id: 3,
+        name: "Tab 3",
+        content: "Content 3",
+    },
+    {
+        id: 4,
+        name: "Tab 4",
+        content: "Content 4",
+    },
+    {
+        id: 5,
+        name: "Tab 5",
+        content: "Content 5",
+    },
+    {
+        id: 6,
+        name: "Tab 6",
+        content: "Content 6",
+    },
+    {
+        id: 7,
+        name: "Tab 7",
+        content: "Content 7",
     },
 ];
 

@@ -1,27 +1,27 @@
-.wrapper {
-    scroll-snap-type: y mandatory;
-    --tw-scroll-snap-strictness: mandatory;
-}
+// .wrapper {
+//     scroll-snap-type: y mandatory;
+//     --tw-scroll-snap-strictness: mandatory;
+// }
 
-// scroll-css-begin
-.wrapper::-webkit-scrollbar {
-    // display: none;
-}
+// // scroll-css-begin
+// .wrapper::-webkit-scrollbar {
+//     // display: none;
+// }
 
-.wrapper::-webkit-scrollbar-thumb {
-    // display: none;
-}
+// .wrapper::-webkit-scrollbar-thumb {
+//     // display: none;
+// }
 
-.wrapper::-webkit-scrollbar-track {
-    // display: none;
-}
+// .wrapper::-webkit-scrollbar-track {
+//     // display: none;
+// }
 
-// scroll-css-end
+// // scroll-css-end
 
-.hero {
-    scroll-snap-align: start;
-}
+// .hero {
+//     scroll-snap-align: start;
+// }
 
-.about {
-    scroll-snap-align: center;
-}
+// .about {
+//     scroll-snap-align: center;
+// }

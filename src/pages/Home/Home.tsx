@@ -10,6 +10,7 @@ import Roadmap from "@site/src/components/Roadmap";
 import roadmap from "@site/src/data/roadmap";
 import styles from "./Home.module.scss";
 import Footer from "@site/src/layouts/components/Footer";
+import videos from "@site/src/data/videos";
 
 const cx = classNames.bind(styles);
 type Props = {};
@@ -24,7 +25,7 @@ const Home = function ({}: Props) {
                 <About />
             </section>
             <section>
-                <Courses courses={courses} />
+                <Courses videos={videos} courses={courses} />
             </section>
             <section>
                 <Roadmap timelines={roadmap} />

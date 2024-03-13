@@ -97,68 +97,34 @@ const Hero = function () {
             },
             detectRetina: true,
         }),
-        []
+        [],
     );
 
     return (
         <header className={clsx("hero hero--primary", styles.heroBanner)}>
-            {init && (
+            {/* {init ? (
                 <Particles
                     id={clsx(styles.tsparticles)}
                     particlesLoaded={particlesLoaded}
                     options={options}
                 />
-            )}
-            {/* <div className={clsx("container", styles.heroContentContainer)}>
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className={clsx(
-              "button button--secondary button--lg",
-              styles.button
-            )}
-            href="/docs/intro"
-          >
-            <span className={clsx(styles.toggleText)}>
-              Cardano Blockchain&nbsp;
-            </span>
-            Certified Associate
-          </Link>
-        </div>
-      </div> */}
+            ) : null} */}
 
             <section className={cx("banner", "container")}>
                 <div className={cx("wrapper-banner")}>
                     <div className={cx("banner-inner")}>
-                        <div
-                            data-aos="fade-left"
-                            className={cx("banner-content")}
-                        >
+                        <div data-aos="fade-left" className={cx("banner-content")}>
                             <h1 className={cx("banner-title")}>
-                                <div className={cx("banner-title-up")}>
-                                    Platform for
-                                </div>
-                                <div className={cx("banner-title-down")}>
-                                    The crypto Industry
-                                </div>
+                                <div className={cx("banner-title-up")}>Platform for</div>
+                                <div className={cx("banner-title-down")}>The crypto Industry</div>
                             </h1>
                             <div className={cx("banner-intro")}>
-                                At vero eos et accusamus et iusto odio
-                                ignissimos ducimus qui blanditiis praesentium um
-                                deleniti atque corrupti.
+                                At vero eos et accusamus et iusto odio ignissimos ducimus qui blanditiis praesentium um deleniti atque corrupti.
                             </div>
                             {/* Button goes here */}
-                            <button className={cx("banner-button")}>
-                                Get started
-                            </button>
+                            <button className={cx("banner-button")}>Get started</button>
                         </div>
-                        <div
-                            data-aos="fade-right"
-                            className={cx("banner-image-wrapper")}
-                        >
+                        <div data-aos="fade-right" className={cx("banner-image-wrapper")}>
                             <div className={cx("banner-image-container")}>
                                 <CardanoIcon className={cx("branner-image")} />
                             </div>

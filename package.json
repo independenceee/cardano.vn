@@ -21,6 +21,7 @@
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
+    "@types/react-slick": "^0.23.13",
     "aos": "^2.3.4",
     "classnames": "^2.5.1",
     "clsx": "^2.0.0",
