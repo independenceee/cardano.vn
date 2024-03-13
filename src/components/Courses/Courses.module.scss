@@ -1,6 +1,18 @@
+.wrapper {
+    min-height: 100vh;
+}
+
 .inner {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-top: 80px;
+}
+
+.courses-left {
+    flex: 0.6;
+}
+
+.courses-right {
+    flex: 0.4;
 }

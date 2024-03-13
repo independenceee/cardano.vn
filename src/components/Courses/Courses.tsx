@@ -22,7 +22,24 @@ const Courses = function ({ courses }: Props) {
             />
 
             <div className="container">
-                <div className={cx("inner")}></div>
+                <div className={cx("inner")}>
+                    <section className={cx("courses-left")}>left</section>
+                    <section className={cx("courses-right")}>
+                        <div className={cx("courses-right-list")}>
+                            
+                        </div>
+                        <div className={cx("video-wrapper")} data-aos="fade-right">
+                            <iframe
+                                className={cx("video")}
+                                src="https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe"
+                                title="YouTube video player"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen={false}
+                            />
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     );
