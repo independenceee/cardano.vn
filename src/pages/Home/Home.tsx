@@ -8,7 +8,6 @@ import EventsList from "@site/src/data/events";
 import courses from "@site/src/data/courses";
 import Roadmap from "@site/src/components/Roadmap";
 import roadmap from "@site/src/data/roadmap";
-import News from "@site/src/components/News";
 import styles from "./Home.module.scss";
 import Footer from "@site/src/layouts/components/Footer";
 
@@ -23,9 +22,6 @@ const Home = function ({}: Props) {
             </section>
             <section>
                 <About />
-            </section>
-            <section>
-                <News />
             </section>
             <section>
                 <Courses courses={courses} />

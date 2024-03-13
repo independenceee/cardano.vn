@@ -7,8 +7,6 @@ import classNames from "classnames/bind";
 import Title from "@site/src/components/Title";
 import styles from "./Courses.module.scss";
 import { CourseType } from "@site/src/types/Generics";
-import Course from "@site/src/components/Courses/Course";
-import Slider from "react-slick";
 const cx = classNames.bind(styles);
 
 type Props = {
