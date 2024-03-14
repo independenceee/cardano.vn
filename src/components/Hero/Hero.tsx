@@ -122,7 +122,9 @@ const Hero = function () {
                                 At vero eos et accusamus et iusto odio ignissimos ducimus qui blanditiis praesentium um deleniti atque corrupti.
                             </div>
                             {/* Button goes here */}
-                            <button className={cx("banner-button")}>Get started</button>
+                            <Link href="/docs/intro" className={cx("banner-button")}>
+                                Get started
+                            </Link>
                         </div>
                         <div data-aos="fade-right" className={cx("banner-image-wrapper")}>
                             <div className={cx("banner-image-container")}>
