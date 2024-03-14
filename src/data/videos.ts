@@ -1,16 +1,15 @@
 import { Video } from "../types/Generics";
 
-
 const videos: Video[] = [
     {
         id: 1,
         name: "Video 1",
-        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+        url: "https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe",
     },
     {
         id: 2,
         name: "Video 1",
-        url: "https://www.youtube.com/embed/YNsfFPmKxQM?si=GA-xV2Fd8uaYEVZz",
+        url: "https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe",
     },
     {
         id: 3,
@@ -20,7 +19,52 @@ const videos: Video[] = [
     {
         id: 4,
         name: "Video 1",
-        url: "https://www.youtube.com/embed/YNsfFPmKxQM?si=GA-xV2Fd8uaYEVZz",
+        url: "https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
+    },
+    {
+        id: 5,
+        name: "Video 1",
+        url: "https://www.youtube.com/embed/DtBwTYS0hJs?si=pbxPtVxu73Sr_Iir",
     },
     {
         id: 5,

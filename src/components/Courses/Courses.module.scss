@@ -26,6 +26,8 @@
     padding: unset;
     margin: 0;
     padding: 0;
+    max-height: 40vh;
+    overflow-y: auto;
 }
 
 .video-wrapper {
@@ -76,7 +78,7 @@
 
     &:hover {
         background: #32323232;
-        transform: scale(1.1);
+        // transform: scale(1.1);
     }
     &:hover::before,
     &:hover::after {

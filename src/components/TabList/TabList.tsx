@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Slider, { Settings } from "react-slick";
 import styles from "./TabList.module.scss";
 import { CourseType } from "@site/src/types/Generics";
+import videos from "@site/src/data/videos";
 const cx = classNames.bind(styles);
 
 type Props = {
@@ -43,7 +44,15 @@ const TabList = function ({ tabs }: Props) {
                     ))}
                 </Slider>
             </div>
-            <div className={cx("content")}>{tabs[currentTabIndex].content}</div>
+            <ul className={cx("video-list")}>
+                {videos.map(({ id, name, url }) => (
+                    <li key={id} className={cx("video-item-wrapper")}>
+                        <span className={cx("box")} />
+                        <span>{name}</span>
+                    </li>
+                ))}
+            </ul>
+            {/* <div className={cx("content")}>{tabs[currentTabIndex].content}</div> */}
         </div>
     );
 };

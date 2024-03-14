@@ -23,38 +23,113 @@
     }
 }
 
-.content {
-    flex: 1;
+.video-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
+    flex-direction: column;
+    list-style-type: none;
+    padding: unset;
+    margin: 0;
+    padding: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.video-wrapper {
     position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: var(--ifm-color-primary-light);
+    margin-bottom: 6px;
+    position: relative;
+
+    .box {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
     &::before {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 24px;
-        height: 24px;
+        width: 8px;
+        height: 8px;
         border-bottom: 3px solid var(--ifm-color-primary-light);
         border-left: 3px solid var(--ifm-color-primary-light);
         transition: all 0.5s;
+        opacity: 0;
     }
-
     &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
-        width: 24px;
-        height: 24px;
-        border-bottom: 3px solid var(--ifm-color-primary-light);
+        width: 8px;
+        height: 8px;
+        border-top: 3px solid var(--ifm-color-primary-light);
         border-right: 3px solid var(--ifm-color-primary-light);
         transition: all 0.5s;
+        opacity: 0;
+    }
+
+    &:hover {
+        background: #32323232;
+        // transform: scale(1.1);
+    }
+    &:hover::before,
+    &:hover::after {
+        opacity: 1;
     }
 }
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 3px solid var(--ifm-color-primary-light);
+    border-left: 3px solid var(--ifm-color-primary-light);
+    transition: all 0.5s;
+    opacity: 0;
+}
 
-.line-bottom {
-    transition: all 0.5s ease;
+.box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-bottom: 3px solid var(--ifm-color-primary-light);
+    border-right: 3px solid var(--ifm-color-primary-light);
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.video-item-wrapper:hover {
+    .box::after,
+    .box::before {
+        opacity: 1;
+    }
+}
+.play-icon-wrapper {
+    padding-left: 2.4rem;
+}
+
+.video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
