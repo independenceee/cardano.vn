@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import Events from "@site/src/components/Events";
 import Courses from "@site/src/components/Courses";
@@ -10,7 +10,8 @@ import Roadmap from "@site/src/components/Roadmap";
 import roadmap from "@site/src/data/roadmap";
 import styles from "./Home.module.scss";
 import Footer from "@site/src/layouts/components/Footer";
-import videos from "@site/src/data/videos";
+// import videos from "@site/src/data/videos";
+import axios from "axios";
 
 const cx = classNames.bind(styles);
 type Props = {};
@@ -25,7 +26,7 @@ const Home = function ({}: Props) {
                 <About />
             </section>
             <section>
-                <Courses videos={videos} courses={courses} />
+                <Courses courses={courses} />
             </section>
             <section>
                 <Roadmap timelines={roadmap} />

@@ -94,6 +94,11 @@
     .wrapper-inner {
         flex-direction: column-reverse;
         width: 100%;
+
+        &.reverse {
+            flex-direction: column;
+            width: 100%;
+        }
     }
 
     .video-wrapper {
