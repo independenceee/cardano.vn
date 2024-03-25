@@ -1,16 +1,17 @@
 import React from 'react';
 import Giscus from "@giscus/react";
-import {useColorMode} from '@docusaurus/theme-common';
+import { useColorMode } from '@docusaurus/theme-common';
+import siteConfig from '@generated/docusaurus.config';
 
 export default function GiscusComponent() {
-    const {colorMode} = useColorMode();
-
+    const { colorMode } = useColorMode();
+    const { github_repo, github_repoId, github_categoryId }: any = siteConfig.customFields;
     return (
         <Giscus
-            repo="tidvn2/cardano-comment"
-            repoId="R_kgDOLgIHqg"
+            repo={github_repo}
+            repoId={github_repoId}
             category="General"
-            categoryId="DIC_kwDOLgIHqs4Cd9ao"
+            categoryId={github_categoryId}
             mapping="pathname"
             term="Leave a Comment"
             strict="0"
