@@ -1,4 +1,4 @@
-import { CourseType } from "../types/Generics";
+import { CourseType } from "@site/src/types/Generics";
 
 const courses: CourseType[] = [
     {

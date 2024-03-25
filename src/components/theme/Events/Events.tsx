@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Title from "@site/src/components/Title";
+import Title from "@site/src/components/theme/Title";
 import styles from "./Events.module.scss";
 import React from "react";
 import { EventItem } from "@site/src/types/Generics";

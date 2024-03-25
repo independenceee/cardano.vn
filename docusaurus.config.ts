@@ -17,6 +17,10 @@ const config: Config = {
         defaultLocale: "en",
         locales: ["en"],
     },
+    customFields: {
+        googleApiKey: "AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js",
+    },
+
     plugins: ["docusaurus-plugin-sass"],
     presets: [
         [

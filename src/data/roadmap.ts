@@ -1,4 +1,4 @@
-import { RoadmapType } from "../types/Generics";
+import { RoadmapType } from "@site/src/types/Generics";
 
 const roadmap: RoadmapType[] = [
   {

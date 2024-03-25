@@ -7,10 +7,10 @@ import { type Container, type ISourceOptions } from "@tsparticles/engine";
 import clsx from "clsx";
 import { loadSlim } from "@tsparticles/slim";
 
-import CardanoIcon from "../../assets/icons/logo.svg";
 const cx = classNames.bind(styles);
 import styles from "./Hero.module.scss";
 import classNames from "classnames/bind";
+import { CardanoIcon } from "@site/src/assets";
 const Hero = function () {
     const [init, setInit] = useState(false);
     const { siteConfig } = useDocusaurusContext();
