@@ -7,7 +7,7 @@ import classNames from "classnames/bind";
 import Title from "@site/src/components/theme/Title";
 import styles from "./Courses.module.scss";
 import { CourseType } from "@site/src/types/Generics";
-import TabList from "../TabList";
+import TabList from "@site/src/components/theme/TabList";
 import axios from "axios";
 import convertIframe from "@site/src/utils/convert-iframe";
 const cx = classNames.bind(styles);

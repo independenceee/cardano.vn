@@ -3,10 +3,7 @@ import classNames from "classnames/bind";
 import styles from "./Footer.module.scss";
 import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
-import { YoutubeIcon, TelegramIcon, TwitterIcon, RedisIcon,LinkedInIcon, EmailIcon, ArrowIcon } from "@site/src/assets";
-
-
-// import EventImage from "../../../assets/images/event.png";
+import { YoutubeIcon, TelegramIcon, TwitterIcon, RedisIcon, LinkedInIcon, EmailIcon, ArrowIcon } from "@site/src/assets";
 
 const cx = classNames.bind(styles);
 const socials = [

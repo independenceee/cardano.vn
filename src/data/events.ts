@@ -1,4 +1,4 @@
-import { EventItem } from "../types/Generics";
+import { EventItem } from "@site/src/types/Generics";
 
 const EventsList: EventItem[] = [
   {

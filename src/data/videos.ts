@@ -1,4 +1,4 @@
-import { Video } from "../types/Generics";
+import { Video } from "@site/src/types/Generics";
 
 const videos: Video[] = [
     {

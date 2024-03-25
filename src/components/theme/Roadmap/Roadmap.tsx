@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import classNames from "classnames/bind";
 import styles from "./Roadmap.module.scss";
 import { RoadmapType } from "@site/src/types/Generics";
-import Title from "../Title";
+import Title from "@site/src/components/theme/Title";
 
 type Props = {
   timelines: Array<RoadmapType>;
