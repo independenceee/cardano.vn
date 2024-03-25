@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./About.module.scss";
 import classNames from "classnames/bind";
 import Title from "../Title";
-import CheckIcon from "../../assets/icons/check.svg";
+import { CheckIcon } from "@site/src/assets";
 
 const cx = classNames.bind(styles);
 

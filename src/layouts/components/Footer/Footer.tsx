@@ -3,13 +3,8 @@ import classNames from "classnames/bind";
 import styles from "./Footer.module.scss";
 import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
-import EmailIcon from "../../../assets/icons/mail.svg";
-import ArrowIcon from "../../../assets/icons/arrow.svg";
-import YoutubeIcon from "../../../assets/icons/youtube.svg";
-import TelegramIcon from "../../../assets/icons/telegram.svg";
-import TwitterIcon from "../../../assets/icons/twitter.svg";
-import RedisIcon from "../../../assets/icons/redis.svg";
-import LinkedInIcon from "../../../assets/icons/linkedin.svg";
+import { YoutubeIcon, TelegramIcon, TwitterIcon, RedisIcon,LinkedInIcon, EmailIcon, ArrowIcon } from "@site/src/assets";
+
 
 // import EventImage from "../../../assets/images/event.png";
 

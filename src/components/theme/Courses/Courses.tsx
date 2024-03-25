@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classNames from "classnames/bind";
-import Title from "@site/src/components/Title";
+import Title from "@site/src/components/theme/Title";
 import styles from "./Courses.module.scss";
 import { CourseType } from "@site/src/types/Generics";
 import TabList from "../TabList";

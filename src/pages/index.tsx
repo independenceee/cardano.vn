@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Home from "@site/src/pages/Home";
-import Aos from "@site/src/components/Aos";
+import Aos from "@site/src/components/theme/Aos";
 
 type Props = {};
 

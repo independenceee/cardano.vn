@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
-import Events from "@site/src/components/Events";
-import Courses from "@site/src/components/Courses";
-import Hero from "@site/src/components/Hero";
-import About from "@site/src/components/About";
+import Events from "@site/src/components/theme/Events";
+import Courses from "@site/src/components/theme/Courses";
+import Hero from "@site/src/components/theme/Hero";
+import About from "@site/src/components/theme/About";
 import EventsList from "@site/src/data/events";
 import courses from "@site/src/data/courses";
-import Roadmap from "@site/src/components/Roadmap";
+import Roadmap from "@site/src/components/theme/Roadmap";
 import roadmap from "@site/src/data/roadmap";
 import styles from "./Home.module.scss";
 import Footer from "@site/src/layouts/components/Footer";
