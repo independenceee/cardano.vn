@@ -19,6 +19,9 @@ const config: Config = {
     },
     customFields: {
         googleApiKey: "AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js",
+        github_repo: "tidvn2/Comment",
+        github_repoId: "R_kgDOLlOOng",
+        github_categoryId: "DIC_kwDOLlOOns4CeNye",
     },
 
     plugins: ["docusaurus-plugin-sass"],
