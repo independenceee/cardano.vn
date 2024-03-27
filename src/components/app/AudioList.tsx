@@ -4,11 +4,15 @@ import useSWR from 'swr'
 import ReactAudioPlayer from 'react-h5-audio-player';
 import { useState } from "react";
 import { List, Tooltip } from 'antd';
+import classNames from "classnames/bind";
+import styles from "@site/src/css/custom.scss"
+const cx = classNames.bind(styles);
 
 interface Props {
     sheetId: string,
     sheetName: string,
-    range?: string
+    range?: string,
+    className?: string
 }
 interface Audio {
     id: string,
@@ -18,7 +22,7 @@ interface Audio {
     abstract: string
 
 }
-export default function AudioList({ sheetId, sheetName, range }: Props) {
+export default function AudioList({ sheetId, sheetName, range, className }: Props) {
     const [currentTrack, setTrackIndex] = useState(0);
 
     const { data, error, isLoading } = useSWR<ResponseSheetData>(
@@ -58,24 +62,27 @@ export default function AudioList({ sheetId, sheetName, range }: Props) {
         <div>
             <ReactAudioPlayer
                 src={playlist[currentTrack].link}
+                // style={{ position: "fixed", zIndex: 10 }}
                 showSkipControls
                 onClickNext={handleClickNext}
                 onEnded={handleEnd}
                 onError={() => { console.log('play error') }}
             />
+            {/* < div className="playlist" style={{ marginTop: 100, }}> */}
             < div className="playlist" >
                 <List
-                    bordered
+                    className={cx("video-list")}
                     dataSource={playlist}
                     renderItem={(audio, index) => (
                         <List.Item
-                            style={index === currentTrack ? { backgroundColor: '#f0f0f0', fontWeight: 'bold' } : null}
+                            className={cx("video-item-wrapper")}
+                            style={index === currentTrack ? { backgroundColor: '#f0f0f0', fontSize: 16, fontWeight: 'bold', border: "none" } : { border: "none", fontSize: 16 }}
                             onClick={() => setTrackIndex(index)}>
                             <Tooltip title={audio.abstract}>
                                 <span>{audio.title}</span>
                             </Tooltip>
                             < br />
-                            <small>{audio.date} </small>
+                            <small className={cx("small")}>{audio.date} </small>
                         </List.Item>
                     )}
                 />

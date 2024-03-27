@@ -26,6 +26,8 @@ const TabList = function ({ tabs }: Props) {
         setCurrentTabIndex(index);
     };
 
+    const Children = tabs[currentTabIndex].Children
+
     return (
         <div className={cx("wrapper")}>
             <div className={cx("header-tabs")}>
@@ -44,15 +46,10 @@ const TabList = function ({ tabs }: Props) {
                     ))}
                 </Slider>
             </div>
-            <ul className={cx("video-list")}>
-                {videos.map(({ id, name, url }) => (
-                    <li key={id} className={cx("video-item-wrapper")}>
-                        <span className={cx("box")} />
-                        <span>{name}</span>
-                    </li>
-                ))}
-            </ul>
-            {/* <div className={cx("content")}>{tabs[currentTabIndex].content}</div> */}
+
+            <div className={cx("content")}>
+                <Children videos={videos} />
+            </div>
         </div>
     );
 };

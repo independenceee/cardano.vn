@@ -1,14 +1,18 @@
 import { getSheetData, ResponseSheetData } from "@site/src/lib/axios";
 import * as React from "react"
 import useSWR from 'swr'
+import classNames from "classnames/bind";
+import styles from "@site/src/css/custom.scss"
 
+const cx = classNames.bind(styles);
 interface DataTableSheetProps {
     sheetId: string;
     sheetName: string;
     range?: string;
+    className?: string
 }
 
-export default function TableSheet({ sheetId, sheetName, range }: DataTableSheetProps) {
+export default function TableSheet({ sheetId, sheetName, range, className }: DataTableSheetProps) {
     const { data, error, isLoading } = useSWR<ResponseSheetData>(
         { sheetId, sheetName, range },
         getSheetData
@@ -33,7 +37,7 @@ export default function TableSheet({ sheetId, sheetName, range }: DataTableSheet
     }));
 
     return (
-        <table>
+        <table className={cx(className)}>
             <tr>
                 {columns.map((column) => (
                     <th key={column.key}>{column.title}</th>

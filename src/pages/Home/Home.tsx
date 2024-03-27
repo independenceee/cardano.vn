@@ -10,13 +10,11 @@ import Roadmap from "@site/src/components/theme/Roadmap";
 import roadmap from "@site/src/data/roadmap";
 import styles from "./Home.module.scss";
 import Footer from "@site/src/layouts/components/Footer";
-// import videos from "@site/src/data/videos";
-import axios from "axios";
 
 const cx = classNames.bind(styles);
 type Props = {};
 
-const Home = function ({}: Props) {
+const Home = function ({ }: Props) {
     return (
         <main className={cx("wrapper")}>
             <section>

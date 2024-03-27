@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export type CourseType = {
     id: number;
     name: string;
-    content: any;
+    Children: any;
 };
 
 export type EventItem = {
