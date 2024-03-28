@@ -1,6 +1,6 @@
 import { Video } from "@site/src/types/Generics";
 
-const videos: Video[] = [
+const Thau_Hieu_Cardano: Video[] = [
     {
         id: 1,
         name: "Cardano 360",
@@ -39,4 +39,4 @@ const videos: Video[] = [
 
 ];
 
-export default videos;
+export default Thau_Hieu_Cardano;

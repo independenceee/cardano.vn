@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { CourseType } from "@site/src/types/Generics";
 import classNames from "classnames/bind";
-import GiscusComponent from "../components/app/GiscusComponent"
-import AudioList from "../components/app/AudioList"
-import AudioPlayer from "../components/app/AudioPlayer"
-import TableSheet from "@site/src/components/app/TableSheet";
+import GiscusComponent from "../components/app/GiscusComponent/GiscusComponent"
+import AudioList from "../components/app/AudioList/AudioList"
+import TableSheet from "@site/src/components/app/TableSheet/TableSheet";
 import styles from "../css/custom.scss";
-import Link from "@docusaurus/Link";
 import axios from "axios";
 import convertIframe from "../utils/convert-iframe";
+import Thau_Hieu_Cardano from "./Thau_Hieu_Cardano";
+import Smart_Contract from "./Smart_Contract";
+import Tin_Tuc_Va_Cong_Dong from "./Tin_Tuc_Va_Cong_Dong";
 const cx = classNames.bind(styles)
 
 
-type Props = {
-    videos?: any
-}
+
 
 const courses: CourseType[] = [
     {
         id: 1,
         name: "Thấu hiểu cardano",
-        Children: function ({ videos }: Props) {
+        Children: function () {
             return (
                 <ul className={cx("video-list")}>
-                    {videos.map(({ id, name, url }) => (
+                    {Thau_Hieu_Cardano.map(({ id, name, url }) => (
                         <a href={url} key={id} className={cx("video-item-wrapper")}>
                             <span className={cx("box")} />
                             <span>{name}</span>
@@ -37,10 +36,10 @@ const courses: CourseType[] = [
     {
         id: 2,
         name: "Smart Contract",
-        Children: function ({ videos }: Props) {
+        Children: function () {
             return (
                 <ul className={cx("video-list")}>
-                    {videos.map(({ id, name, url }) => (
+                    {Smart_Contract.map(({ id, name, url }) => (
                         <li key={id} className={cx("video-item-wrapper")}>
                             <span className={cx("box")} />
                             <span>{name}</span>
@@ -54,10 +53,10 @@ const courses: CourseType[] = [
     {
         id: 3,
         name: "Tin tức & Cộng đồng",
-        Children: function ({ videos }: Props) {
+        Children: function () {
             return (
                 <ul className={cx("video-list")}>
-                    {videos.map(({ id, name, url }) => (
+                    {Tin_Tuc_Va_Cong_Dong.map(({ id, name, url }) => (
                         <li key={id} className={cx("video-item-wrapper")}>
                             <span className={cx("box")} />
                             <span>{name}</span>
@@ -93,7 +92,7 @@ const courses: CourseType[] = [
     {
         id: 6,
         name: "Table Sheet",
-        Children: function ({ videos }: Props) {
+        Children: function () {
             return (
                 <ul className={cx("video-list")}>
                     <TableSheet className={cx("table")} sheetId="1PyAroxbm1dQ0r47ostCMp-4uIXblLnynSnYT9NWM2lU" sheetName="table" range="A1:G5" />
@@ -104,7 +103,7 @@ const courses: CourseType[] = [
     {
         id: 7,
         name: "Videos",
-        Children: function ({ }: Props) {
+        Children: function () {
             const [videoURL, setVideoURL] = useState<string>("https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe");
             const handleShowVideo = function (src: string) {
                 setVideoURL(convertIframe(src));

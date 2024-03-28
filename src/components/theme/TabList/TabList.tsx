@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Slider, { Settings } from "react-slick";
 import styles from "./TabList.module.scss";
 import { CourseType } from "@site/src/types/Generics";
-import videos from "@site/src/data/videos";
+import videos from "@site/src/data/Thau_Hieu_Cardano";
 const cx = classNames.bind(styles);
 
 type Props = {
@@ -48,7 +48,7 @@ const TabList = function ({ tabs }: Props) {
             </div>
 
             <div className={cx("content")}>
-                <Children videos={videos} />
+                <Children />
             </div>
         </div>
     );

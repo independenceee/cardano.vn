@@ -37,7 +37,7 @@ export default function TableSheet({ sheetId, sheetName, range, className }: Dat
     }));
 
     return (
-        <table className={cx(className)}>
+        <table className={cx("table", className)}>
             <tr>
                 {columns.map((column) => (
                     <th key={column.key}>{column.title}</th>

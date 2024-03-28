@@ -79,7 +79,7 @@ export default function AudioList({ sheetId, sheetName, range, className }: Prop
                             style={index === currentTrack ? { backgroundColor: '#f0f0f0', fontSize: 16, fontWeight: 'bold', border: "none" } : { border: "none", fontSize: 16 }}
                             onClick={() => setTrackIndex(index)}>
                             <Tooltip title={audio.abstract}>
-                                <span>{audio.title}</span>
+                                <span className={cx("small")}>{audio.title}</span>
                             </Tooltip>
                             < br />
                             <small className={cx("small")}>{audio.date} </small>
