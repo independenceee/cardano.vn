@@ -1,9 +1,7 @@
-import * as dotenv from "dotenv";
 import axios from "axios";
-dotenv.config();
 
 const httpRequest = axios.create({
-    baseURL: "",
+    baseURL: "https://sheets.googleapis.com/v4/spreadsheets",
 });
 
 export const get = async function (path: string, options = {}) {

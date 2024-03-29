@@ -5,7 +5,7 @@ import ReactAudioPlayer from 'react-h5-audio-player';
 import { useState } from "react";
 import { List, Tooltip } from 'antd';
 import classNames from "classnames/bind";
-import styles from "@site/src/css/custom.scss"
+import styles from "./AudioList.module.scss"
 const cx = classNames.bind(styles);
 
 interface Props {
@@ -62,13 +62,12 @@ export default function AudioList({ sheetId, sheetName, range, className }: Prop
         <div>
             <ReactAudioPlayer
                 src={playlist[currentTrack].link}
-                // style={{ position: "fixed", zIndex: 10 }}
+
                 showSkipControls
                 onClickNext={handleClickNext}
                 onEnded={handleEnd}
                 onError={() => { console.log('play error') }}
             />
-            {/* < div className="playlist" style={{ marginTop: 100, }}> */}
             < div className="playlist" >
                 <List
                     className={cx("video-list")}
