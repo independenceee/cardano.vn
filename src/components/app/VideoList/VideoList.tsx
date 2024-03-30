@@ -5,9 +5,11 @@ import convertIframe from '@site/src/utils/convert-iframe';
 import { get } from '@site/src/utils/http-requests';
 
 const cx = className.bind(styles)
-type Props = {}
+type Props = {
+    url?: string
+}
 
-const VideoList = function ({ }: Props) {
+const VideoList = function ({ url = "/1PyAroxbm1dQ0r47ostCMp-4uIXblLnynSnYT9NWM2lU/values/youtube?key=AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js" }: Props) {
     const [videoURL, setVideoURL] = useState<string>("https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe");
     const handleShowVideo = function (src: string) {
         setVideoURL(convertIframe(src));
@@ -17,7 +19,7 @@ const VideoList = function ({ }: Props) {
     useEffect(function () {
         (async function () {
             try {
-                const data = await get("/1PyAroxbm1dQ0r47ostCMp-4uIXblLnynSnYT9NWM2lU/values/youtube?key=AIzaSyBm44VZa9sLj5PpaWty_UCWzykTUbxy2js");
+                const data = await get(url);
                 const playlist = data.values.slice(1).map((row, rowIndex) => {
                     return {
                         key: rowIndex.toString(),
