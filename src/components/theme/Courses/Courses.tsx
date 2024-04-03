@@ -30,7 +30,7 @@ const Courses = function ({ courses }: Props) {
                     <section className={cx("courses-left")} data-aos="fade-right">
                         <TabList tabs={courses} />
                     </section>
-                    <VideoList />
+                    <VideoList sheetId="1PyAroxbm1dQ0r47ostCMp-4uIXblLnynSnYT9NWM2lU" sheetName="youtube" />
                 </div>
             </div>
         </div>
