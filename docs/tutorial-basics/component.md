@@ -27,6 +27,11 @@ import TableSheet from "@site/src/components/app/TableSheet";
 <TableSheet sheetId="1PyAroxbm1dQ0r47ostCMp-4uIXblLnynSnYT9NWM2lU" sheetName="table" range="A1:G5" />;
 ```
 
+
+import Courses from "@site/src/components/theme/Courses";
+import courses from "@site/src/data/courses";
+
+<Courses courses={courses} />
 ### Kết Quả :
 
 import TableSheet from "@site/src/components/app/TableSheet";

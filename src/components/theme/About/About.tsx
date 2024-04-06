@@ -15,7 +15,7 @@ const About = function ({ reverse }: Props) {
             <div className={cx("wrapper")}>
                 <Title title="Cardano" subTitle="Cộng đồng tại Việt Nam" />
                 <div className={cx("wrapper-inner", { reverse: reverse })}>
-                    <div className={cx("video-wrapper")} data-aos="fade-right">
+                    <div className={cx("video-wrapper")} >
                         <iframe
                             className={cx("video")}
                             src="https://www.youtube.com/embed/UiY5-ycvM7w?si=Uc9PB7KaWDP7ddpe"
@@ -25,7 +25,7 @@ const About = function ({ reverse }: Props) {
                             allowFullScreen={false}
                         />
                     </div>
-                    <div className={cx("content-wrapper")} data-aos="fade-left">
+                    <div className={cx("content-wrapper")}>
                         <div className={cx("content-header")}>
                             <h2 className={cx("title")}>About Cryptoz</h2>
                             <p className={cx("description")}>

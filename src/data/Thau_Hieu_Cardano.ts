@@ -3,7 +3,7 @@ import { Video } from "@site/src/types/Generics";
 const Thau_Hieu_Cardano: Video[] = [
     {
         id: 1,
-        name: "Cardano 360",
+        name: "Cardano 361",
         url: "https://cardano.vn/docs/Cardano360/intro/",
     },
     {
