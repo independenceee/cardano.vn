@@ -23,9 +23,7 @@ const Hero = function () {
         });
     }, []);
 
-    const particlesLoaded = async (container?: Container): Promise<void> => {
-        console.log(container);
-    };
+
 
     const options: any = useMemo(
         () => ({
@@ -113,7 +111,7 @@ const Hero = function () {
             <section className={cx("banner", "container")}>
                 <div className={cx("wrapper-banner")}>
                     <div className={cx("banner-inner")}>
-                        <div data-aos="fade-left" className={cx("banner-content")}>
+                        <div className={cx("banner-content")}>
                             <h1 className={cx("banner-title")}>
                                 <div className={cx("banner-title-up")}>Platform for</div>
                                 <div className={cx("banner-title-down")}>The crypto Industry</div>
@@ -126,7 +124,7 @@ const Hero = function () {
                                 Get started
                             </Link>
                         </div>
-                        <div data-aos="fade-right" className={cx("banner-image-wrapper")}>
+                        <div className={cx("banner-image-wrapper")}>
                             <div className={cx("banner-image-container")}>
                                 <CardanoIcon className={cx("branner-image")} />
                             </div>

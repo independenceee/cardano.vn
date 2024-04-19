@@ -45,7 +45,7 @@ const VideoList = function ({ sheetId, sheetName, range }: Props) {
         };
     });
     return (
-        <section className={cx("courses-right")} data-aos="fade-left">
+        <section >
             <div className={cx("courses-right-list")}>
                 <ul className={cx("video-list")}>
                     {playlist.map(function ({ title, link }, index: number) {

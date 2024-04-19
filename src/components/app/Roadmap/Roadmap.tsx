@@ -13,12 +13,14 @@ import Title from "@site/src/components/theme/Title";
 
 type Props = {
   timelines: Array<RoadmapType>;
+  title: string;
+  subTitle: string
 };
 
 gsap.registerPlugin(ScrollTrigger);
 const cx = classNames.bind(styles);
 
-const Roadmap = function ({ timelines }: Props) {
+const Roadmap = function ({ timelines, title, subTitle }: Props) {
   const timelineRef = useRef<HTMLDivElement>(null!);
 
   const settings = {
@@ -97,8 +99,8 @@ const Roadmap = function ({ timelines }: Props) {
   return (
     <>
       <Title
-        title="Development"
-        subTitle="The power of the Vietnamese Cardano Comunity"
+        title={title}
+        subTitle={subTitle}
       />
       <div className={cx("wrapper")} ref={timelineRef}>
         <div className={cx("wrapper-inner")}>

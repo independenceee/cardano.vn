@@ -16,16 +16,12 @@ const Title = function ({ title, subTitle }: Props) {
       <Heading
         as="h2"
         className={styles.title}
-        data-aos="fade-up"
-        data-aos-delay={500}
-        data-aos-duration={500}
+
       >
         {title}
       </Heading>
       <p
-        data-aos="fade-up"
-        data-aos-delay={500}
-        data-aos-duration={500}
+
         className={styles.subTitle}
       >
         {subTitle}

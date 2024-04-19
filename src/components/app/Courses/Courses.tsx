@@ -7,17 +7,24 @@ import classNames from "classnames/bind";
 import Title from "@site/src/components/theme/Title";
 import styles from "./Courses.module.scss";
 import { CourseType } from "@site/src/types/Generics";
-import TabList from "@site/src/components/theme/TabList";
+import TabList from "@site/src/components/app/TabList";
 import convertIframe from "@site/src/utils/convert-iframe";
 import { get } from "@site/src/utils/http-requests";
-import VideoList from "../../app/VideoList";
+import VideoList from "@site/src/components/app/VideoList";
+import GiscusComponent from "../GiscusComponent";
+import TableSheet from "../TableSheet";
+import AudioList from "../AudioList";
 const cx = classNames.bind(styles);
 
 type Props = {
     courses: CourseType[];
+    video: {
+        sheetId: string
+        sheetName: string
+    }
 };
 
-const Courses = function ({ courses }: Props) {
+const Courses = function ({ courses, video: { sheetId, sheetName } }: Props) {
     return (
         <div className={cx("wrapper")}>
             <Title
@@ -27,10 +34,10 @@ const Courses = function ({ courses }: Props) {
 
             <div className="container">
                 <div className={cx("inner")}>
-                    <section className={cx("courses-left")} data-aos="fade-right">
+                    <section className={cx("courses-left")}>
                         <TabList tabs={courses} />
                     </section>
-                    <VideoList sheetId="1PyAroxbm1dQ0r47ostCMp-4uIXblLnynSnYT9NWM2lU" sheetName="youtube" />
+                    <VideoList sheetId={sheetId} sheetName={sheetName} />
                 </div>
             </div>
         </div>
